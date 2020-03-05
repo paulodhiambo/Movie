@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    tools:context=".ui.detail.Moviedetail"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/moviephoto"
+                android:scaleType="centerCrop"
+                android:contentDescription="Movie Image" />
+            <TextView
+                android:layout_below="@+id/moviephoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movietitle"
+                android:layout_margin="5dp"
+                android:textSize="17sp"
+                android:text="Title : "/>
+            <TextView
+                android:layout_below="@+id/movietitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieoverview"
+                android:textSize="17sp"
+                android:layout_margin="5dp"
+                android:text="OverView : "/>
+            <TextView
+                android:layout_below="@+id/movieoverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movierelease"
+                android:textSize="17sp"
+                android:layout_margin="5dp"
+                android:text="Release : "/>
+            <TextView
+                android:layout_below="@+id/movierelease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movierating"
+                android:textSize="17sp"
+                android:layout_margin="5dp"
+                android:text="Rating: "/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
