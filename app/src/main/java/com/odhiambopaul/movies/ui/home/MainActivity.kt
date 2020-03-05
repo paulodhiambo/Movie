@@ -1,8 +1,6 @@
 package com.odhiambopaul.movies.ui.home
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -64,7 +62,6 @@ class MainActivity : AppCompatActivity() {
                 .subscribe()
         )
     }
-
     //retrieves all the movies from the database
     private fun getAllMovies() {
         compositeDisposable.add(appdb!!.moviedao()
