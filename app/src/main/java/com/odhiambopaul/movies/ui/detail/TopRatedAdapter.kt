@@ -12,9 +12,11 @@ import com.odhiambopaul.movies.R
 import com.odhiambopaul.movies.data.entity.MovieEntity
 import com.odhiambopaul.movies.utils.image_path
 
-class TopRatedAdapter(val movies: List<MovieEntity>, private val context: Context): RecyclerView.Adapter<TopRatedViewHolder>() {
+class TopRatedAdapter(val movies: List<MovieEntity>, private val context: Context) :
+    RecyclerView.Adapter<TopRatedViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopRatedViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.top_rated_item, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.top_rated_item, parent, false)
         return TopRatedViewHolder(view)
     }
 
@@ -24,7 +26,7 @@ class TopRatedAdapter(val movies: List<MovieEntity>, private val context: Contex
 
     override fun onBindViewHolder(holder: TopRatedViewHolder, position: Int) {
         return holder.bind(movies[position])
-        }
+    }
 
 }
 

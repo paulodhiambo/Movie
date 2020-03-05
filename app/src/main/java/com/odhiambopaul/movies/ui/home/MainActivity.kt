@@ -22,12 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     //movies ArrayList holds the list of movies retrieved from the local database before they are passed to the MoviesAdapter
     private val movies: ArrayList<MovieEntity> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         //creating the instance of the app database
-        appdb= Appdb.getInstance(this)
+        appdb = Appdb.getInstance(this)
 
         //make the network call to retrieve all the movies
         compositeDisposable.add(
@@ -39,10 +40,12 @@ class MainActivity : AppCompatActivity() {
         // call the function to retrieve all the movies from the local database
         getAllMovies()
     }
+
     //display a toast on failure
     private fun onFailure(t: Throwable?) {
         Toast.makeText(this, t?.message!!, Toast.LENGTH_SHORT).show()
     }
+
     // save the movies to the database when the network call is successful
     private fun onResponse(response: Response?) {
         print(response?.results)
@@ -62,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                 .subscribe()
         )
     }
+
     //retrieves all the movies from the database
     private fun getAllMovies() {
         compositeDisposable.add(appdb!!.moviedao()
@@ -73,8 +77,8 @@ class MainActivity : AppCompatActivity() {
                 movies.addAll(it)
                 recyclerview.apply {
                     setHasFixedSize(true)
-                    layoutManager=LinearLayoutManager(this@MainActivity)
-                    adapter=MoviesAdapter(movies,this@MainActivity)
+                    layoutManager = LinearLayoutManager(this@MainActivity)
+                    adapter = MoviesAdapter(movies, this@MainActivity)
                 }
             }
         )
