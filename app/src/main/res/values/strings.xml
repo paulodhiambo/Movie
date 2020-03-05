@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Movies</string>
     <string name="action_settings">Settings</string>
+    <string name="top_rated">top_rated_poster</string>
 </resources>

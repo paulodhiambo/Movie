@@ -10,5 +10,6 @@
         android:id="@+id/top_rated_poster"
         android:layout_width="match_parent"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/top_rated"
         android:layout_height="match_parent"/>
 </androidx.cardview.widget.CardView>
