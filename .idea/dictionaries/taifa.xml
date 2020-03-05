@@ -2,6 +2,7 @@
   <dictionary name="taifa">
     <words>
       <w>buildservice</w>
+      <w>flowable</w>
       <w>moviedao</w>
       <w>moviedetail</w>
     </words>
