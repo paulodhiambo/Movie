@@ -60,12 +60,9 @@ class Moviedetail : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ response -> onResponse(response) }, { t -> onFailure(t) })
         )
-
     }
-
     private fun onFailure(t: Throwable?) {
         Toast.makeText(this,t?.message,Toast.LENGTH_LONG).show()
-
     }
 
     private fun onResponse(response: Response?) {

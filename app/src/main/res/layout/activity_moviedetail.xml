@@ -69,7 +69,7 @@
                 android:id="@+id/top_rated_text"
                 android:layout_width="wrap_content"
                 android:layout_below="@+id/detail_card"
-                android:text="Top Rated"
+                android:text="Top Rated Movies"
                 android:layout_marginTop="5dp"
                 android:textSize="17sp"
                 android:textColor="#000000"
