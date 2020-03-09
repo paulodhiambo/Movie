@@ -8,11 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceBuilder {
 
-    private val okHttpClient=OkHttpClient
+    private val okHttpClient = OkHttpClient
         .Builder()
         .build()
 
-    private val retrofit=Retrofit
+    private val retrofit = Retrofit
         .Builder()
         .baseUrl(BASE_URL)
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -21,7 +21,7 @@ object ServiceBuilder {
         .build()
         .create(MovieApi::class.java)
 
-    fun buildservice():MovieApi{
+    fun buildservice(): MovieApi {
         return retrofit
     }
 }
